@@ -9,7 +9,7 @@ app.use(cors({
 app.use(bodyParser.json());
 const port = 3000;
 
-const message = "Hello World";
+const message = "Hello!!";
 
 app.get("/", (req, res) => {
     res.json({
@@ -18,5 +18,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server started on port ${port}');
+    console.log(`Server started on port ${port}`);
 })
