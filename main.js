@@ -27,7 +27,7 @@ app.post("/", (req, res) => {
     const newUser = {usernameInput, passwordInput};
     users.push(newUser);
     console.log('New User Created: ', newUser);
-    res.status(201).json(newUser);
+    res.status(201).json(users);
 });
 
 app.put('/:index', (req, res) => {
