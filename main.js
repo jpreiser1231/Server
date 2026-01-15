@@ -19,7 +19,7 @@ const users = [];
 
 app.post("/", (req, res) => {
     const{usernameInput, passwordInput} = req.body;
-    if(!name || !passwordInput){
+    if(!usernameInput || !passwordInput){
         return res.status(400).send('Name and password are required');
     }
 
@@ -46,7 +46,6 @@ app.put('/:index', (req, res) => {
 
 app.delete('/:index', (req, res) => {
     const userIndex = parseInt(req.params.index);
-    const{usernameInput, passwordInput} = req.body;
 
 
     if(userIndex === -1){
