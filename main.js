@@ -40,8 +40,8 @@ app.put('/:index', (req, res) => {
     }
 
     users[userIndex] = {usernameInput, passwordInput};
-    console.log('User updated: ', users[userIndex]);
-    res.status(200).json(users[userIndex]);
+    console.log('User updated: ', users);
+    res.status(200).json(users);
 });
 
 app.delete('/:index', (req, res) => {
@@ -53,8 +53,8 @@ app.delete('/:index', (req, res) => {
     }
 
     users.splice(userIndex, 1);
-    console.log('User updated: ', users[userIndex]);
-    res.status(200).json(users[userIndex]);
+    console.log('User updated: ', users);
+    res.status(200).json(users);
 });
 
 app.listen(port, () => {
